@@ -21,10 +21,8 @@ class App{
 
         // Methodnya
         if(isset($url[1])){
-            if(file_exists(serialize($this->controller), $url[1])){
-                $this->method = $url[1];
-                unset($url[1]);
-            }
+            $this->method = $url[1];
+            unset($url[1]);
         }
 
         // Params
