@@ -21,6 +21,15 @@ class Mahasiswa extends Controller{
 
     public function tambah(){
         if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0){
+            //$flash_me
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+
+    public function hapus($id){
+        if($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0){
+            //$flash_me
             header('Location: ' . BASEURL . '/mahasiswa');
             exit;
         }
