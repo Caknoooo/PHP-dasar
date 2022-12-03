@@ -23,8 +23,8 @@ class About extends Controller{
     public function profile(){
         $data['judul'] = 'My Profile';
 
-        $this->view('templates/header', $data);
-        $this->view('about/profile');
+        $this->view('templaetes/header', $data);
+        $this->view('about/page');
         $this->view('templates/footer');
     }
 
